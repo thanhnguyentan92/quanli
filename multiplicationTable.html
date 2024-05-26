@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Mutiplication Table</h1>
+<div id="multiplicationTable">
+
+</div>
+    <script>
+        var table = document.createElement("table");
+        var header = document.createElement("th");
+        for(let j = 2 ; j <= 9; j++){
+
+            header.textContent = i;
+
+
+        }
+        table.appendChild(header);
+        for(let i = 1; i <= 9 ; i++){
+
+            var row = document.createElement("tr");
+            row.textContent = i;
+            for(let j = 2 ; j <= 9; j++){
+
+                var column = document.createElement("td");
+                column.textContent = j +"*" +i+ "= " + (j*i);
+                row.appendChild(column);
+
+
+            }
+
+
+            table.appendChild(row);
+        }
+
+
+        document.getElementById("multiplicationTable").appendChild(table);
+    </script>
+
+</body>
+</html>

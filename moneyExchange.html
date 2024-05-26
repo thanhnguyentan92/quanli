@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width: 500px;
+
+        }
+        button{
+            box-shadow:midnightblue ;
+            border: bisque;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="moneyExchange">
+            <table >
+                <tr>
+                    <th>Amount</th>
+                    <th>From Currentcy</th>
+                    <th>To Currentcy</th>
+                </tr>
+                <tr>
+                    <td><input id="amount" type="text" onclick="" ></td>
+                    <td>
+                        <select id="currentcy" name="currentcy" onchange="showSelectCurrentcy()" >
+                            <option id="vietnam" >Vietnam</option>
+                            <option id="us">US</option>
+                            <option id="japan">Japan</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select id="toCurrentcy" name="currentcy" onchange="showSelectCurrentcy()" >
+                            <option id="vietnam" >Vietnam</option>
+                            <option id="us">US</option>
+                            <option id="japan">Japan</option>
+                        </select>
+                    </td>
+                    <td><button id="convert" onclick="convert()">convert</button></td>
+                </tr>
+
+            </table>
+            <div id="result">result </div>
+        </div>
+
+    </div>
+<script src="moneyExchange.js"></script>
+</body>
+</html>

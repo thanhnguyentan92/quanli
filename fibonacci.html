@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="fibonaci">
+
+</div>
+<div id=" fizzbuzz">
+
+</div>
+<table id="tamgiac">
+
+</table>
+<script>
+    // Bai 3
+    // Fibonacci là một chuỗi số trong đó mỗi số là tổng của hai số trước nó trong chuỗi.
+    // Chuỗi Fibonacci bắt đầu từ hai số đầu tiên là 0 và 1, và các số tiếp theo được tính bằng cách cộng hai số trước đó.
+    //
+    //     Cụ thể, chuỗi Fibonacci có dạng:
+    //
+    //     0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+    var i = 0;
+    var j = 1;
+    var nextNumber = j;
+
+    var array=[];
+    for(var number = 0; number <=20;number++){
+        array.push(i);
+       nextNumber = i + j;
+       i = j;
+       j = nextNumber;
+
+
+    }
+    //bai 5 Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+    var display = document.getElementById("fibonaci");
+    display.innerHTML = "<p>" + array.join(", ") + "</p> <br>"
+    var sumFibonnaci = 0;
+    for(let i = 0; i <= array.length; i++){
+        if(!isNaN(array[i])){
+            sumFibonnaci += array[i];
+        }
+
+    }
+
+
+    //bai 4 Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.
+
+
+
+
+
+//bai 7 Hãy viết một chương trình in ra các số từ 1 đến 100.
+    // Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó.
+    // Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".
+
+
+
+
+//
+//
+// var result = document.getElementById(" fizzbuzz");
+//     for(let i = 1; i <= 100; i++){
+//         var div = document.createElement("div");
+//         if(i % 3 === 0 ){
+//
+//             if(i % 5 === 0){
+//                 div.textContent = "FizzBuzz";
+//             }else {
+//                 div.textContent = "Fizz";
+//             }
+//         }else if(i % 5 === 0){
+//             if(i % 3 === 0){
+//                 div.textContent = "FizzBuzz";
+//             }else{
+//                 div.textContent = "Buzz";
+//             }
+//         }else {
+//             div.textContent =  i + " ";
+//         }
+//     result.appendChild(div);
+//     }
+/// bai 3 In tam giac vuong
+
+    for( let i = 0; i<=4; i++){
+
+        for(let j = 0; j<=i; j++){
+            document.write("*");
+        }
+        document.write("<br>");
+
+    }
+// bai 4 in tam giac nguoc
+    for(let i = 5  ; i >= 1; i--){
+        for (let j = 1;j <=i; j++){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+document.write("<br>");
+    // 2 tinh luy thua
+    // var number = +prompt("nhap so luy thua can tinh")
+    // var result = 1;
+    // if(number === 0){
+    //     result =1;
+    // }else {
+    //     for(let i = 1; i <=number; i++){
+    //         result*=i;
+    //     }
+    //
+    //
+    // }
+    // document.write(result);
+
+    function luythua(number){
+        if(number === 0){
+            return 1;
+        }else {
+            return luythua(number)*luythua(number-1);
+        }
+    }
+    document.write(luythua(3));
+</script>
+</body>
+</html>

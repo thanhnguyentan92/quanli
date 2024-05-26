@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" id="play" onclick="play()">Play</button>
+<script>
+    function play(){
+
+
+        do{
+            var maxNumber =+prompt("So ban muon doan trong khoang lon nhat la bao nhieu");
+            if( isNaN(maxNumber)){
+                alert("Ban chi nhap so.Vui long nhap lai!");
+                return;
+            }
+            var playerChoice = +prompt("nhap so ban doan");
+            if(isNaN(playerChoice)  ){
+                alert("Ban chi nhap so.Vui long nhap lai!");
+                return;
+            }
+            var randomNumber = Math.floor(Math.random() * maxNumber) + 1;
+            if(playerChoice > randomNumber){
+                alert("so ban chon lon hon");
+            }else if(playerChoice < randomNumber){
+                alert("so ban chon nho hon");
+
+
+            }else {
+                alert("so ban chon bang. chuc mung");
+            }
+        }while(1)
+    }
+</script>
+</body>
+</html>

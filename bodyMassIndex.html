@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Body Mass Index</title>
+    <style>
+        button{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <form class="bodyMassIndex">
+        <h1>Body Mass Index</h1>
+        <label for="weight">Your weight:</label>
+        <input type="text" id="weight" name="weight">
+        <br>
+        <br>
+        <label for="height">Your height:</label>
+        <input type="text" id="height" name="height">
+        <br>
+    </form>
+    <button id="check" onclick="checkBMI()">Check</button>
+    <div id="result"></div>
+<script src="bodyMassIndex.js"></script>
+</body>
+</html>
